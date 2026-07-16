@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Delta Force - Home Page</title>
+
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .section{
+      padding-top: 20px !important;
+      h3{
+        margin-top: 20px !important;
+      }
+    }
+
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>  
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Black Delta Force</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link special" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="Weapons.html">Weapons</a></li>
+          <li class="nav-item"><a class="nav-link " href="Transports.html">Transports</a> </li>
+          <li class="nav-item"><a class="nav-link" href="Center.html">Centers</a></li> 
+          <li class="nav-item"><a class="nav-link" href="Operations.html">Operations</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Authority.html">Authority</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Header -->
+<div class="idai-intro">
+  <div class="idai-logo">
+    <img src="BDF Logo.jpg" alt="IGC Logo">
+  </div>
+  <h2 class="idai-heading">Black Delta Force</h2>
+  <div class="idai-details">
+    <strong>
+      Headquarters: Forbidden Sanctuary Province<br>
+      Motto: Eyes of the Council, Hands of the Marshal<br>
+      Reginal Centers: All the member countries of IGC<br>
+    </strong>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Black Delta Force Key Features</h2>
+  <h3>Strength, Secrecy, and Sovereignty</h3>
+  <center>
+    <img src="Black Delta Force Key features.jpg"><br>
+  </center>
+  <p>
+    The Black Delta Force stands as the supreme embodiment of discipline and technological might within the IDAI Universe. Every unit, every command, and every operation reflects the Marshal’s vision of absolute order and precision. Its foundation rests upon secrecy, loyalty, and the cosmic energy that fuels its destiny. Below are the defining features that make the Force unparalleled among all guardians of the Covenant:<br><br>
+    <ul>
+      <li><strong>Supreme Command:</strong> Led by the Red Marshal, whose authority and wisdom guide every mission with divine precision.</li>
+      <li><strong>Cragnon Control Panel:</strong> The tactical brain of the Force, orchestrating operations through quantum intelligence and strategic foresight.</li>
+      <li><strong>Cosmic Power Hub:</strong> The IDAI Morphex Tower channels plasma energy from Proxima Centauri to empower the Force’s entire infrastructure.</li>
+      <li><strong>Forbidden Sanctuary Province:</strong> The sacred land of destiny, hidden from the world, where the Force’s oath and purpose are eternally preserved.</li>
+      <li><strong>Advanced Arsenal:</strong> Equipped with plasma rifles, stealth jets, and armored convoys designed for precision and dominance.</li>
+      <li><strong>Dual Identity:</strong> Protector in light, collector in shadow — balancing justice with secrecy under the Marshal’s command.</li>
+    </ul><br>
+    Each feature defines the Black Delta Force not merely as a military entity but as a living covenant of power and purpose. It is the unseen hand of justice, the eternal guardian of the Forbidden Sanctuary, and the cosmic shield of the IDAI Universe.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Leadership</h2>
+  <h3>The Eternal Command</h3>
+  <center>
+    <img src="Red Marshal.jpg"><br>
+  </center>
+  <p>
+    The Red Marshal stands as the eternal guardian of the Black Delta Force, embodying discipline, vision, and unyielding strength. His presence is not merely symbolic but the living essence of authority, guiding the Force with wisdom and unwavering resolve. In his command, every mission becomes a testament to loyalty, precision, and the pursuit of justice. The Marshal’s leadership ensures that the Force remains united, vigilant, and prepared to act in both light and shadow.<br><br>
+    Alongside the Marshal, the Cragnon Supreme Hub operates as the tactical brain of the Force, orchestrating strategies with unmatched intelligence. Together, they form the dual pillars of leadership — one human, eternal, and revered; the other mechanical, calculating, and flawless. This union of man and machine defines the leadership of the Black Delta Force, ensuring that no challenge is too great, no threat too hidden, and no mission beyond reach.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Cosmo City</h2>
+  <h3>Global Diplomacy & Trade Hub</h3>
+  <center>
+    <img src="Cosmo City - 1.jpg"><br>
+  </center>
+  <p>
+    Cosmo City stands as the radiant capital of international affairs, a place where diplomacy and commerce converge under the banner of the IDAI Global Council. Its skyline glitters with towers of glass and steel, each representing the unity of nations and the strength of collaboration. Within its avenues, ambassadors, traders, and visionaries walk side by side, weaving together the threads of peace and prosperity. The city’s heartbeat is powered by trust, innovation, and the shared dream of a world without borders.<br><br>
+    Beyond its architectural marvels, Cosmo City embodies the living spirit of global harmony. Every district is a testament to cultural exchange, where traditions blend seamlessly with futuristic progress. Markets overflow with goods from every continent, while conference halls echo with voices shaping tomorrow’s treaties. It is more than a city—it is the stage upon which humanity rehearses its collective destiny. Here, the Black Delta Force maintains its vigilant presence, ensuring that diplomacy thrives under the shield of security and justice.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Forbidden Sanctuary Province</h2>
+  <h3>The Destiny of Shadows</h3>
+  <center>
+    <img src="FP city - 1.jpg"><br>
+  </center>
+  <p>
+    The Forbidden Sanctuary Province is the destiny of the Black Delta Force, a realm hidden beyond the veil of ordinary existence. It is not merely a province but the culmination of secrecy, sacrifice, and eternal guardianship. Here, the Marshal’s vision is realized, and the Force’s most sacred missions are carried out in silence. Every tower, every gate, and every shadow whispers of destiny, reminding the world that true power lies in the unseen. The Province is the sanctuary where loyalty is tested, and the future of the Force is eternally safeguarded.<br><br>
+    Within its boundaries, the Forbidden Sanctuary Province thrives as the unseen heart of authority. It is the land where Cragnon’s commands resonate, where the Morphex Tower channels cosmic plasma to empower the guardians, and where the destiny of the Force is written in silence. No outsider may enter, no secret may escape. It is the eternal frontier, the destiny of shadows, and the living testament of the Black Delta Force’s unbreakable oath to protect, preserve, and prevail.
+  </p>
+</div>
+
+<div class="section">
+  <h2>About the Black Delta Force</h2>
+  <h3>Guardian of Order, Powered by Innovation</h3>
+  <center>
+    <img src="Black Delta Force Key features.jpg"><br>
+  </center>
+  <p>
+    The Black Delta Force is the strategic backbone of the IDAI Universe, designed to safeguard sovereignty and ensure balance across every frontier. Operating under the Red Marshal’s command, it unites advanced technology, disciplined leadership, and cosmic energy into a single integrated system. Its mission is clear: protect, preserve, and prevail — with precision at scale and secrecy at its core.<br><br>
+    Built on trust and powered by innovation, the Force combines tactical intelligence with futuristic infrastructure. From the Cragnon Control Panel to the Morphex Tower’s plasma energy hub, every element is engineered to deliver resilience and authority. The Forbidden Sanctuary Province stands as its destiny — a secure frontier where the oath of guardianship is eternally preserved. Together, these pillars define the Black Delta Force as more than a military entity: it is a covenant of strength, sovereignty, and cosmic purpose.
+  </p>
+</div>
+
+<br><br><div class="section">
+  <h3>Powered By:</h3>
+  <center class="sp">
+    <img src="IGC Logo.jpg"><br>
+    <a href="rayaantasnim.github.io/IGC/">IDAI Global Community (IGC)</a>
+  </center>
+</div>
+
+<br><br><footer>
+  <p>© IGC: IDAI Global Community. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

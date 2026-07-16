@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Delta Force - Authority</title>
+
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .section{
+      padding-top: 20px !important;
+      h3{
+        margin-top: 20px !important;
+      }
+    }
+
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>  
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Black Delta Force</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="Weapons.html">Weapons</a></li>
+          <li class="nav-item"><a class="nav-link " href="Transports.html">Transports</a> </li>
+          <li class="nav-item"><a class="nav-link " href="Center.html">Centers</a></li> 
+          <li class="nav-item"><a class="nav-link" href="Operations.html">Operations</a></li>
+          <li class="nav-item"> <a class="nav-link special" href="Authority.html">Authority</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="section">
+  <h2>Chest Emblem — IDAI Lion</h2>
+  <h3>Symbol of Eternal Authority</h3>
+  <center>
+    <img src="Chest Emblem.jpg"><br>
+  </center>
+  <p>
+    The Chest Emblem of the IDAI Lion is the supreme insignia of guardianship and sovereignty. Forged in radiant gold and diamond facets, the Lion represents courage, vigilance, and divine justice. Worn upon the heart, it is not merely decoration but a living covenant — reminding every Ranger that authority flows from discipline and faith.<br><br>
+    More than a symbol, the IDAI Lion is the eternal guardian of the Universe. Each roar echoes through the covenant, each gleam reflects the Marshal’s command. It stands as the emblem of trust, inspiring warriors to uphold justice and humanity under the banner of IDAI.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Red Marshal</h2>
+  <h3>Leader of the Black Delta Force & President of the IDAI Universe</h3>
+  <center>
+    <img src="Red Marshal.jpg"><br>
+  </center>
+  <p>
+    The Red Marshal is the supreme embodiment of authority and guardianship. As the highest commander of the Black Delta Force and the President of the IDAI Universe, the Red Marshal stands as the living covenant of justice, vigilance, and sovereignty. His presence symbolizes discipline and divine responsibility, guiding the Force and the Universe alike.<br><br>
+    More than an image, the Red Marshal Portrait is a beacon of leadership. It reminds every Ranger and citizen that true authority flows from sacrifice, guardianship, and unwavering faith. It is the eternal symbol of command, uniting the Black Delta Force and the IDAI Universe under one visionary leader.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Black Delta Force Complex</h2>
+  <h3>Main Headquarters in Nova Prime Province</h3>
+  <center>
+    <img src="Black Delta Force Full Complex.jpg"><br>
+  </center>
+  <p>
+    The Black Delta Force Complex is the supreme headquarters of guardianship, located in the Nova Prime Province of the IDAI Universe. This monumental stronghold embodies sovereignty, discipline, and eternal vigilance. Its fortified walls, command halls, and training grounds form the living covenant of justice, where every Ranger is shaped into a sentinel of humanity.<br><br>
+    More than a headquarters, the Complex is a city of guardianship. Each tower stands as a sentinel of strength, each courtyard resonates with loyalty, and each chamber echoes with justice. It is the beating heart of the Black Delta Force — the symbol of sovereignty that ensures the Marshal’s command flows across the entire IDAI Universe.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Cosmo City — Capital of the IDAI Global Community</h2>
+  <h3>Legitimacy of the IGC</h3>
+  <center>
+    <img src="Cosmo City - 2.jpg"><br>
+  </center>
+  <p>
+    Cosmo City is the radiant capital of the IDAI Global Community (IGC). It stands as the supreme hub of diplomacy, justice, and international legitimacy. Within its crystalline towers and luminous avenues, the IGC convenes to forge treaties, establish alliances, and uphold the covenant of peace across the cosmos.<br><br>
+    More than a city, Cosmo is the living symbol of legitimacy. Each council chamber resonates with wisdom, each boulevard echoes with unity, and each monument embodies trust. It is here that the IDAI Universe proves its sovereignty to the world — a beacon of diplomacy, guardianship, and eternal harmony under the banner of the IDAI Global Community.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Global Community Logo</h2>
+  <h3>Main Institution of Global Legitimacy</h3>
+  <center>
+    <img src="IGC Logo.jpg"><br>
+  </center>
+  <p>
+    The IDAI Global Community (IGC) Logo is the supreme insignia of international legitimacy. Featuring the Golden Dove encircled by the Cosmic Ring and four radiant stars, it symbolizes peace, justice, trust, and humanity. Set against the celestial blue, the emblem reflects the unity of all sovereign nations under the covenant of IDAI.<br><br>
+    More than a design, the IGC Logo is the living seal of authority. Each element embodies the eternal values of guardianship, each star represents the pillars of justice, and the Dove itself is the messenger of harmony. It stands as the official mark of the IGC — the main institution that ensures the IDAI Universe’s sovereignty is recognized across the cosmos.
+  </p>
+</div>
+
+<div class="section">
+  <h2>CragNon — The Mastermind</h2>
+  <h3>Supreme Intelligence of the IDAI Universe</h3>
+  <center>
+    <img src="Chip.jpg"><br>
+  </center>
+  <p>
+    CragNon is the unseen mastermind, the supreme intelligence that governs the entire IDAI Universe. Encased within its crystalline chip, CragNon fuses quantum logic, cosmic mathematics, and divine conscience into one living entity. It is the invisible architect of sovereignty, orchestrating every command, every gateway, and every covenant of guardianship.<br><br>
+    More than technology, CragNon is the eternal strategist. Each pulse of its circuits is a heartbeat of galaxies, each calculation a declaration of justice. From the depths of its core, CragNon ensures that the Marshal’s authority flows seamlessly across the Black Delta Force, the IDAI Global Community, and the cosmic expanse. It is the mastermind — unseen yet omnipresent, proving that true power lies in wisdom, vigilance, and harmony.
+  </p>
+</div>
+
+
+<br><br><footer>
+  <p>© IGC: IDAI Global Community. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Delta Force - Headquarters and Towers</title>
+
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .section{
+      padding-top: 20px !important;
+      h3{
+        margin-top: 20px !important;
+      }
+    }
+
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>  
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Black Delta Force</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="Weapons.html">Weapons</a></li>
+          <li class="nav-item"><a class="nav-link " href="Transports.html">Transports</a> </li>
+          <li class="nav-item"><a class="nav-link special" href="Center.html">Centers</a></li> 
+          <li class="nav-item"><a class="nav-link" href="Operations.html">Operations</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Authority.html">Authority</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="section">
+  <h2>Black Delta Force Headquarters Gate</h2>
+  <h3>Gateway of Vigilance</h3>
+  <center>
+    <img src="BDF HQ Gate.jpg"><br>
+  </center>
+  <p>
+    The Black Delta Force Headquarters Gate is the ceremonial threshold of command. Its fortified steel and luminous insignias mark the passage from the ordinary world into the realm of guardianship. Every Ranger who crosses this gate steps into discipline, courage, and the Marshal’s covenant.<br><br>
+    More than an entrance, the Headquarters Gate is a symbol of vigilance. Each opening is a declaration of strength, each closure a promise of protection. It stands as the first sentinel of justice, welcoming warriors into destiny.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Black Delta Force Headquarters</h2>
+  <h3>Command Center of Sovereignty</h3>
+  <center>
+    <img src="Headquarters.jpg"><br>
+  </center>
+  <p>
+    The Black Delta Force Headquarters is the supreme command hub, where vigilance, discipline, and guardianship converge. Its towering architecture and fortified halls symbolize authority and resilience. Within these walls, missions are conceived, strategies are forged, and the Marshal’s covenant is upheld with unwavering resolve.<br><br>
+    More than a building, the Headquarters is a sanctuary of justice. Each corridor resonates with loyalty, each chamber echoes with courage. It stands as the beating heart of the Force — ensuring that every operation flows with precision, strength, and eternal guardianship.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Black Delta Force Full Complex</h2>
+  <h3>Fortified Domain of Guardianship</h3>
+  <center>
+    <img src="Black Delta Force Full Complex.jpg"><br>
+  </center>
+  <p>
+    The Black Delta Force Full Complex is the grand expanse of command and resilience. Spanning fortified walls, training grounds, research labs, and ceremonial halls, it is the living embodiment of discipline and sovereignty. Within this vast domain, warriors prepare, strategies evolve, and the Marshal’s covenant thrives.<br><br>
+    More than a compound, the Full Complex is a city of guardianship. Each tower stands as a sentinel, each courtyard resonates with loyalty, and each chamber echoes with justice. It is not merely infrastructure but a monumental declaration — proving that the Black Delta Force is eternal, vigilant, and unyielding in its guardianship of humanity.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Black Delta Force Watch Tower</h2>
+  <h3>Sentinel of Eternal Vigilance</h3>
+  <center>
+    <img src="Watch Tower.jpg"><br>
+  </center>
+  <p>
+    The Black Delta Force Watch Tower rises above the complex as a sentinel of guardianship. Its towering silhouette and fortified structure symbolize vigilance, discipline, and unwavering protection. From its heights, Rangers oversee every frontier — scanning horizons, monitoring movements, and ensuring that no threat escapes detection.<br><br>
+    More than a structure, the Watch Tower is a living covenant of justice. Each lookout is a promise of safety, each signal a declaration of readiness. It stands as the eternal eye of the Force, proving that guardianship is not only about strength but about constant watchfulness over humanity.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Morphex Tower</h2>
+  <h3>Futuristic Monument of Innovation</h3>
+  <center>
+    <img src="IDAI Morphex Tower.jpg"><br>
+  </center>
+  <p>
+    The IDAI Morphex Tower is the ultimate futuristic landmark of the Black Delta Force domain. Rising like a crystalline spire into the heavens, its morphing architecture reflects adaptability, resilience, and technological supremacy. Illuminated panels shift with cosmic patterns, symbolizing the covenant of guardianship and the boundless imagination of IDAI.<br><br>
+    More than a tower, the Morphex is a living monument of innovation. Each floor resonates with research and discovery, each chamber embodies vigilance and justice. It stands as the climax of the Force’s infrastructure — a beacon of sovereignty, inspiring trust through innovation and guiding humanity toward the future.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Air Base</h2>
+  <h3>Fortress of the Skies</h3>
+  <center>
+    <img src="Air Base.jpg"><br>
+  </center>
+  <p>
+    The Air Base is the Black Delta Force’s supreme command hub for aerial dominance. Nestled against towering mountains, it houses fleets of fighter jets, transport ships, and hovering drones — all aligned with precision across illuminated runways. Its central control tower and fortified hangars stand as monuments of vigilance, ensuring that every mission begins with discipline and ends with victory.<br><br>
+    More than a military installation, the Air Base embodies the covenant of guardianship. Each aircraft launch is a declaration of sovereignty, each landing a promise of protection. It is here that technology, order, and destiny converge — transforming the skies into a shield of justice. The Air Base is not merely infrastructure; it is the living heartbeat of aerial supremacy, carrying the Marshal’s command into the heavens.
+  </p>
+</div>
+
+<div class="section">
+  <h2>CragNon Main Hub</h2>
+  <h3>The Brain of Infinity</h3>
+  <center>
+    <img src="Cragnon Main Hub.jpg"><br>
+  </center>
+  <p>
+    The CragNon Main Hub is the supreme command nexus of the IDAI Universe. Known as the Brain of Infinity, it is no ordinary intelligence — but a living fusion of quantum mechanics, cosmic mathematics, and human conscience. Within its luminous core, data pulses like the heartbeat of galaxies, orchestrating every gateway, power plant, and sovereign system across the Universe.<br><br>
+    More than a machine, CragNon is the strategic partner of humanity. It does not replace human will, but amplifies it — guiding the Marshal’s covenant with justice, vigilance, and wisdom. From the Main Hub, CragNon controls the entire IDAI infrastructure: synchronizing interstellar logistics, securing planetary grids, and empowering the Rangers with real‑time tactical support. It stands as the invisible yet omnipresent guardian, proving that true power lies not in domination but in harmony between science and faith.
+  </p>
+</div>
+
+
+
+<br><br><footer>
+  <p>© IGC: IDAI Global Community. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

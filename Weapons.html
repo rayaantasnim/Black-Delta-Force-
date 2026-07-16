@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Delta Force - Weapons and Arsenals</title>
+
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .section{
+      padding-top: 20px !important;
+      h3{
+        margin-top: 20px !important;
+      }
+    }
+
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>  
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Black Delta Force</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link special" href="Weapons.html">Weapons</a></li>
+          <li class="nav-item"><a class="nav-link " href="Transports.html">Transports</a> </li>
+          <li class="nav-item"><a class="nav-link" href="Center.html">Centers</a></li> 
+          <li class="nav-item"><a class="nav-link" href="Operations.html">Operations</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Authority.html">Authority</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="section">
+  <h2>Arsenal Volt</h2>
+  <h3>Where Power Meets Precision</h3>
+  <center>
+    <img src="Arsenal Volt.jpg"><br>
+  </center>
+  <p>
+    Arsenal Volt is the central armory of the Black Delta Force, a futuristic vault engineered to store and showcase the most advanced weaponry ever designed. Its architecture combines metallic resilience with luminous energy conduits, creating an environment where every firearm and tactical system is organized with absolute precision. Within its walls, plasma rifles, anti‑gravity war guns, and stealth interceptors are maintained under strict protocols, ensuring readiness at any moment. Arsenal Volt is not just a storage facility — it is the living embodiment of discipline, innovation, and technological supremacy.<br><br>
+    Beyond its physical presence, Arsenal Volt represents the strategic backbone of the Force’s arsenal management. Every weapon is cataloged, monitored, and powered by the Morphex Tower’s cosmic energy, guaranteeing operational integrity across missions. It is here that the Red Marshal’s doctrine of order and secrecy is reinforced, where the arsenal transforms from mere hardware into a covenant of protection. Arsenal Volt ensures that the Black Delta Force remains equipped, empowered, and prepared to act with precision across every frontier.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Abyssal Harbinger Sword</h2>
+  <h3>Forged in Silence, Wielded in Destiny</h3>
+  <center>
+    <img src="Abyssal Harbinger Sword.jpg"><br>
+  </center>
+  <p>
+    The Abyssal Harbinger Sword is the ceremonial blade of the Black Delta Force, engineered with alloys that channel plasma energy through its core. Its design integrates wing‑like motifs and embedded gemstones, symbolizing both resilience and precision. Each strike resonates with controlled power, making it not only a weapon of combat but also a technological marvel. The blade’s construction ensures balance in motion, durability under extreme conditions, and seamless integration with the Force’s tactical systems. It is the embodiment of engineering excellence, forged to deliver precision at scale.<br><br>
+    Beyond its technical brilliance, the Abyssal Harbinger Sword represents the oath of guardianship sworn by the Force. It is a symbol of courage, honor, and trust — carried into battle as a reminder of the Marshal’s command and the destiny of the Forbidden Sanctuary Province. Every gemstone reflects a principle: safety, honor, strength, and trust. More than a weapon, it is a covenant of justice, a reminder that the Black Delta Force stands as eternal protector of order, wielding destiny in silence yet striking with unshakable purpose.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Nightshade Urban Assault Interceptor</h2>
+  <h3>Silent Speed, Absolute Control</h3>
+  <center>
+    <img src="Nightshade Urban Assault Interceptor.jpg"><br>
+  </center>
+  <p>
+    The Nightshade Urban Assault Interceptor is the Black Delta Force’s premier tactical vehicle, engineered for stealth, speed, and dominance in metropolitan combat zones. Its matte black armor, angular design, and advanced suspension system allow seamless navigation through dense urban environments. Equipped with adaptive LED arrays and reinforced tires, the Interceptor ensures operational readiness under any condition. Every component is optimized for rapid deployment, precision maneuvering, and resilience against high‑intensity threats, making it the ultimate embodiment of urban warfare technology.<br><br>
+    Beyond its technical prowess, the Nightshade Interceptor symbolizes vigilance in the shadows. It is the unseen protector of the city, patrolling silently yet striking decisively when called upon. The vehicle represents the Marshal’s doctrine of balance — visible enough to inspire trust, yet concealed enough to maintain secrecy. In every mission, the Nightshade Interceptor stands as a covenant of guardianship, ensuring that the Black Delta Force remains the silent hand of justice across the urban frontier.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Wraith Urban</h2>
+  <h3>The Primary Mission Vehicle</h3>
+  <center>
+    <img src="Wraith Urban.jpg"><br>
+  </center>
+  <p>
+    The Wraith Urban is the Black Delta Force’s primary mission and operation vehicle, engineered to deliver unmatched performance in both metropolitan and frontier environments. Its aerodynamic frame, reinforced armor, and multi‑wheel drive system ensure stability and speed across diverse terrains. Integrated with adaptive lighting, advanced navigation, and autonomous support modules, the Wraith Urban is designed for rapid deployment and sustained missions. Every detail — from its glowing rims to its tactical communication systems — reflects precision engineering and readiness for high‑intensity operations.<br><br>
+    More than a transport, the Wraith Urban embodies the Force’s doctrine of mobility and dominance. It is the Marshal’s spearhead in every mission, carrying troops, arsenal, and intelligence into the heart of conflict. Symbolically, the vehicle represents resilience and authority — a moving fortress that projects the Force’s presence wherever destiny calls. With its blend of speed, strength, and sovereignty, the Wraith Urban stands as the ultimate mission vehicle, ensuring that the Black Delta Force remains unstoppable across every horizon.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Guardian Sentinel</h2>
+  <h3>Military Missions, Vanguard Response</h3>
+  <center>
+    <img src="IDAI Guardian Sentinel.jpg"><br>
+  </center>
+  <p>
+    The IDAI Guardian Sentinel is the frontline defense and response vehicle of the Black Delta Force, engineered for heavy‑duty military missions. With eight reinforced wheels, angular armor plating, and integrated sensor arrays, it is designed to withstand the most hostile environments. Blue energy conduits illuminate its frame, symbolizing both power and precision. Every mission begins with the Sentinel — carrying troops, arsenal, and intelligence into the heart of conflict. Its advanced systems ensure rapid deployment, tactical superiority, and resilience under pressure, making it the ultimate embodiment of military readiness.<br><br>
+    Beyond its engineering, the Guardian Sentinel represents the Force’s doctrine of protection and sovereignty. It is the Marshal’s shield on the battlefield, projecting authority and trust wherever deployed. The inscriptions of “Vanguard Response Unit” reflect its role as the first line of defense, ensuring that no threat breaches the covenant of order. More than a vehicle, the IDAI Guardian Sentinel is a moving fortress — a covenant of strength, discipline, and guardianship, securing the destiny of the Black Delta Force across every mission.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Desert Revenant</h2>
+  <h3>Resilience Forged in Sand and Steel</h3>
+  <center>
+    <img src="Desert Revenant.jpg"><br>
+  </center>
+  <p>
+    The Desert Revenant is the Black Delta Force’s specialized off‑road assault vehicle, engineered to dominate the harshest desert landscapes. Its oversized tires, engraved armor panels, and plasma‑powered headlights ensure stability and visibility across shifting sands and rocky terrain. Designed for speed and endurance, the Revenant integrates advanced cooling systems and tactical weapon mounts, allowing seamless operation under extreme heat. With armored knights at its helm, the vehicle embodies a fusion of medieval guardianship and futuristic engineering, making it the ultimate symbol of survival and strength in unforgiving environments.<br><br>
+    Beyond its technical resilience, the Desert Revenant represents the Force’s oath of perseverance. It is the Marshal’s chariot across barren frontiers, carrying the covenant of justice into lands where survival itself is a battle. Every dust trail it leaves behind is a testament to endurance, every strike a reminder of destiny fulfilled. More than a mission vehicle, the Revenant is a living emblem of resilience — a guardian forged in sand and steel, ensuring that the Black Delta Force remains unyielding wherever the horizon stretches.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Heavy Machine Gun</h2>
+  <h3>Unyielding Firepower, Relentless Precision</h3>
+  <center>
+    <img src="Heavy Machine Gun.png"><br>
+  </center>
+  <p>
+    The Heavy Machine Gun is the backbone of the Black Delta Force’s battlefield dominance, engineered for sustained fire and uncompromising reliability. Its intricate mechanical design integrates reinforced barrels, advanced cooling systems, and plasma‑powered ammunition feeds, ensuring continuous operation under extreme conditions. Mounted on tactical platforms or deployed in fortified positions, the weapon delivers overwhelming suppressive fire, neutralizing threats with relentless precision. Every component reflects durability and engineering mastery, making it the ultimate instrument of battlefield control.<br><br>
+    Beyond its technical strength, the Heavy Machine Gun symbolizes the Force’s doctrine of authority and resilience. It is the Marshal’s voice in combat — a thunderous reminder of discipline and sovereignty. Each burst of fire represents not just tactical superiority but the covenant of protection sworn by the Black Delta Force. More than a weapon, it is a statement of power, ensuring that order is preserved and justice enforced across every frontier of the IDAI Universe.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Photon Edge Rifle</h2>
+  <h3>Light Forged into Lethal Precision</h3>
+  <center>
+    <img src="Photon Edge Rifle.jpg"><br>
+  </center>
+  <p>
+    The Photon Edge Rifle is a masterpiece of futuristic engineering, designed to channel concentrated energy into every shot. Its metallic frame, accented with glowing neon conduits, integrates advanced scopes, modular barrels, and precision ammunition systems. Built for adaptability, the rifle can transition seamlessly between close‑quarters combat and long‑range engagements. Every component reflects resilience and innovation, ensuring that the Black Delta Force maintains superiority across diverse battlefields.<br><br>
+    Beyond its technical brilliance, the Photon Edge Rifle embodies the Force’s philosophy of balance — light transformed into power, precision forged into guardianship. It is not merely a weapon but a symbol of vigilance, carried by the Marshal’s warriors as a covenant of justice. Each luminous strike represents discipline and sovereignty, reminding allies and adversaries alike that the Black Delta Force wields technology not just to fight, but to preserve order across the cosmic frontier.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Rivolver</h2>
+  <h3>Elegance in Power, Precision in Motion</h3>
+  <center>
+    <img src="Rivolver.jpg"><br>
+  </center>
+  <p>
+    The Rivolver is a futuristic sidearm of the Black Delta Force, designed to merge elegance with lethal precision. Its metallic frame, accented with gold and violet conduits, channels energy through a reinforced barrel system. Advanced optics and modular chambers allow seamless adaptation to multiple combat scenarios, from close‑quarters engagements to tactical suppression. Compact yet powerful, the Rivolver embodies the perfect balance of portability and firepower, ensuring that every strike resonates with accuracy and authority.<br><br>
+    Beyond its engineering, the Rivolver symbolizes the Marshal’s doctrine of discipline and guardianship. It is not merely a weapon but a statement of sovereignty, carried as a reminder of vigilance and trust. Each luminous accent reflects the covenant of justice, transforming the revolver into more than a firearm — into a ceremonial emblem of the Force’s eternal mission. In every hand it rests, the Rivolver becomes a guardian’s promise, ensuring that order and destiny remain protected across the cosmic frontier.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Combat Shotgun</h2>
+  <h3>Close‑Range Dominance, Tactical Precision</h3>
+  <center>
+    <img src="Combat Shotgun.jpg"><br>
+  </center>
+  <p>
+    The Combat Shotgun is the Black Delta Force’s definitive close‑quarters weapon, engineered for maximum impact in confined environments. Its reinforced frame, glowing plasma conduits, and precision‑tuned barrel deliver devastating bursts of energy at short range. Integrated with modular attachments and advanced recoil control, the shotgun ensures stability and accuracy even under rapid fire. Designed for urban combat and breach operations, it is the weapon of choice when missions demand overwhelming force in tight spaces.<br><br>
+    Beyond its technical mastery, the Combat Shotgun represents the Force’s doctrine of decisive action. It is the Marshal’s answer to uncertainty — a weapon that transforms close‑range encounters into controlled victories. Each luminous strike embodies discipline and guardianship, reminding adversaries that no frontier is beyond the reach of justice. More than a firearm, the Combat Shotgun is a covenant of strength, ensuring that the Black Delta Force remains unyielding in every mission where precision and power converge.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Anti‑Gravity Special Wargun</h2>
+  <h3>Quantum Force, Gravity Unleashed</h3>
+  <center>
+    <img src="Anti - Gravity Special Wargun.jpg"><br>
+  </center>
+  <p>
+    The Anti‑Gravity Special Wargun, codenamed Quantum Gravity Projector, is the pinnacle of IDAI’s advanced weapon systems. Engineered with a Gravity Core Stabilizer and powered by quantum conduits, it channels immense gravitational energy into concentrated blasts. Its sleek metallic frame, illuminated with blue, purple, and gold accents, reflects both precision and raw destructive potential. Designed for battlefield supremacy, the Wargun neutralizes armored threats, destabilizes enemy formations, and redefines the physics of combat. Every strike is calibrated to deliver overwhelming force while maintaining operational stability under extreme conditions.<br><br>
+    Beyond its technological brilliance, the Anti‑Gravity Wargun symbolizes the Marshal’s doctrine of cosmic guardianship. It is not merely a weapon but a covenant of sovereignty, representing the Black Delta Force’s mastery over science and destiny. Each projection of gravity is a reminder that order is safeguarded by innovation, and justice is enforced through power greater than imagination. More than an arsenal piece, the Wargun is a living testament to the Force’s eternal mission — to wield the laws of the universe in defense of humanity and the covenant of trust.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Tranquilizer Gun</h2>
+  <h3>Calm. Safe. Effective.</h3>
+  <center>
+    <img src="Tranquilizer Gun.jpg"><br>
+  </center>
+  <p>
+    The Tranquilizer Gun is the Black Delta Force’s non‑lethal precision weapon, engineered to neutralize threats without causing permanent harm. Its sleek metallic frame integrates glowing conduits and advanced chambers designed for Neuro‑Sleep Darts. With long‑range accuracy and safe‑mode calibration, the weapon ensures controlled engagements in sensitive missions. Built for tactical operations where restraint is paramount, the Tranquilizer Gun provides the Force with a reliable solution for subduing adversaries while maintaining discipline and order.<br><br>
+    Beyond its technical design, the Tranquilizer Gun embodies the Marshal’s doctrine of guardianship through mercy. It is a symbol of balance — power tempered with compassion, authority guided by responsibility. Each Neuro‑Sleep Dart represents the covenant of safety, ensuring that justice is enforced without unnecessary destruction. More than a weapon, it is a promise of trust, reminding allies and adversaries alike that the Black Delta Force wields strength not only to conquer but also to protect with humanity.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Training Field</h2>
+  <h3>Discipline Forged Through Simulation</h3>
+  <center>
+    <img src="Training Field.jpg"><br>
+  </center>
+  <p>
+    The Training Field is the Black Delta Force’s advanced combat preparation ground, engineered to refine skill, discipline, and tactical mastery. Equipped with holographic targets, drone surveillance, and modular weapon stations, it provides a dynamic environment where soldiers sharpen their precision and adaptability. Rows of armored warriors engage in synchronized drills, while futuristic rifles and arsenals are inspected and deployed across metallic platforms. Every detail of the field reflects readiness, ensuring that the Force remains prepared for missions across every frontier.<br><br>
+    Beyond its technological infrastructure, the Training Field symbolizes the Marshal’s doctrine of discipline and unity. It is not merely a place of practice but a covenant of guardianship, where strength is tempered with responsibility. Each drill represents resilience, each holographic strike a promise of vigilance. More than a facility, the Training Field is the living heart of the Black Delta Force — a sanctuary where warriors are forged, justice is rehearsed, and destiny is prepared for the battles yet to come.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Vanishing Gun</h2>
+  <h3>Teleportation System</h3>
+  <center>
+    <img src="Teleportation System.jpg"><br>
+  </center>
+  <p>
+    The Vanishing Gun is the Black Delta Force’s revolutionary teleportation weapon, engineered to translocate targets with instantaneous precision. Powered by a Quantum Translocation Engine, it integrates holographic panels for destination configuration, target analysis, and secure locking protocols. Its glowing conduits and metallic frame reflect advanced energy stabilization, ensuring safe and non‑lethal deployment. Designed for missions where stealth and control are paramount, the Vanishing Gun redefines tactical engagement by merging science with guardianship.<br><br>
+    Beyond its technological marvel, the Vanishing Gun embodies the Marshal’s doctrine of destiny and vigilance. It is not merely a weapon but a covenant of trust, ensuring adversaries are subdued without destruction. Each activation represents discipline and sovereignty, reminding allies that the Black Delta Force wields innovation to preserve order. More than an arsenal piece, the Vanishing Gun is a living testament to the Force’s eternal mission — to safeguard humanity with precision, compassion, and cosmic authority.
+  </p>
+</div>
+
+
+
+<div class="section">
+  <center class="sp">
+    <a href="https://rayaantasnim.github.io/IDAI-Weapons-Sector/army.html">Explore More</a>
+  </center>
+</div>
+
+<br><br><footer>
+  <p>© IGC: IDAI Global Community. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

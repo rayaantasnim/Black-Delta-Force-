@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Delta Force - Transport and Vehicles</title>
+
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .section{
+      padding-top: 20px !important;
+      h3{
+        margin-top: 20px !important;
+      }
+    }
+
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>  
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Black Delta Force</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="Weapons.html">Weapons</a></li>
+          <li class="nav-item"><a class="nav-link special" href="Transports.html">Transports</a> </li>
+          <li class="nav-item"><a class="nav-link" href="Center.html">Centers</a></li> 
+          <li class="nav-item"><a class="nav-link" href="Operations.html">Operations</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Authority.html">Authority</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="section">
+  <h2>Transports</h2>
+  <h3>Commanding the Roads, Seas, and Skies</h3>
+  <center>
+    <img src="BDF Fleet.jpg"><br>
+  </center>
+  <p>
+    The Transport Division of the Black Delta Force represents the lifeline of mobility across land, sea, and air. From armored carriers to futuristic jets, every vehicle is engineered with precision, resilience, and authority. These transports are not merely machines — they are guardians of sovereignty, ensuring that the Marshal’s command flows seamlessly across every frontier.<br><br>
+    More than a fleet, the Transports embody the covenant of guardianship. Each engine roar is a declaration of vigilance, each voyage a promise of protection. Whether navigating oceans, soaring skies, or patrolling cities, the Transport Division stands as the living testament of discipline and destiny — carrying the Force forward into every mission with strength, speed, and unwavering resolve.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Aegis Guardian</h2>
+  <h3>Armored SUV — Shield of the Streets</h3>
+  <center>
+    <img src="Aegis Guardian.jpg"><br>
+  </center>
+  <p>
+    The Aegis Guardian is the Black Delta Force’s armored SUV, engineered to dominate urban terrain with resilience and authority. Its angular metallic frame, reinforced bumpers, and tactical roof‑mounted sensors make it a fortress on wheels. The glowing shield emblem at its grille symbolizes guardianship, reflecting the Marshal’s doctrine of vigilance and protection. Designed for both patrol and rapid deployment, the Aegis Guardian ensures that every mission begins with uncompromising strength.<br><br>
+    Beyond its physical armor, the Aegis Guardian embodies unity and discipline. It is not merely a transport but a sentinel of justice, carrying warriors through neon‑lit cities and hostile frontiers alike. Each journey represents a covenant of guardianship, where technology and responsibility merge. More than a vehicle, the Aegis Guardian is the living shield of the Black Delta Force — a declaration that order will prevail, no matter the battlefield.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Boat</h2>
+  <h3>Luxury Combat Yacht — Sovereign of the Seas</h3>
+  <center>
+    <img src="Boat.jpg"><br>
+  </center>
+  <p>
+    The Boat is no ordinary vessel — it is the Black Delta Force’s luxury combat yacht, forged to dominate oceans with elegance and authority. Its angular futuristic design, illuminated decks, and helipad integration make it both a fortress and a palace upon the waves. Engineered with stealth camouflage and reinforced hull plating, the Boat ensures resilience against hostile waters while carrying the Marshal’s command across maritime frontiers.<br><br>
+    More than a transport, the Boat embodies sovereignty and prestige. Each voyage across neon‑lit harbors and open seas reflects the covenant of guardianship. It is a declaration that the Black Delta Force rules not only the skies and cities but also the oceans. The Boat stands as a living testament of discipline, luxury, and vigilance — a beacon of strength gliding through the tides of destiny.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Phantom Serpent</h2>
+  <h3>Stealth Tactical Helicopter</h3>
+  <center>
+    <img src="Helicopter - Phantom Serpent.jpg"><br>
+  </center>
+  <p>
+    The Phantom Serpent is the Black Delta Force’s stealth tactical helicopter, engineered for covert operations and precision strikes. Its angular frame, multi‑rotor system, and glowing green conduits make it a predator of the skies. Equipped with advanced weapon mounts and adaptive flight systems, the Phantom Serpent penetrates hostile airspace undetected, delivering Rangers into the heart of critical missions.<br><br>
+    More than an aircraft, the Phantom Serpent embodies vigilance and silence. Known as the “Silent Fang of the Skies,” it represents discipline, speed, and unseen guardianship. Each mission flown by the Phantom Serpent reinforces the Marshal’s covenant: to defend peace and justice with courage, precision, and unwavering resolve.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Crimson Horizon</h2>
+  <h3>Luxury SUV — Flame of Authority</h3>
+  <center>
+    <img src="IDAI Crimson Horizon.jpg"><br>
+  </center>
+  <p>
+    The IDAI Crimson Horizon is the Black Delta Force’s luxury SUV, forged to blend elegance with resilience. Its aerodynamic red frame, sharp LED headlights, and alloy wheels make it a symbol of prestige and power. Designed for both urban patrol and long‑range missions, the Crimson Horizon glides across landscapes with commanding presence, reflecting the Marshal’s covenant of guardianship.<br><br>
+    More than a vehicle, the Crimson Horizon embodies sovereignty and discipline. Each journey across city roads and frontier highways is a declaration of vigilance. It is not merely transport, but a living flame of authority — carrying warriors with strength, speed, and unwavering resolve. The Crimson Horizon stands as a beacon of justice, ensuring that the Black Delta Force’s command shines wherever destiny calls.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Crimson Ranger</h2>
+  <h3>Armored SUV — Flame of Discipline</h3>
+  <center>
+    <img src="IDAI Crimson Ranger.jpg"><br>
+  </center>
+  <p>
+    The IDAI Crimson Ranger is the Black Delta Force’s armored SUV, designed to conquer rugged terrains and urban patrols alike. Its bold white frame, angular styling, and powerful alloy wheels make it a symbol of resilience and authority. With “IDAI” emblazoned across its grille, the Crimson Ranger declares sovereignty wherever it roams — from mountain paths to city streets.<br><br>
+    More than transport, the Crimson Ranger embodies discipline and guardianship. Each mission across rocky trails and mist‑covered frontiers is a testament to vigilance. It is not merely a vehicle but a sentinel of justice, carrying warriors with strength, speed, and unwavering resolve. The Crimson Ranger stands as a living flame of responsibility, ensuring that the Marshal’s command reaches every corner of destiny.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Crimson Strider</h2>
+  <h3>Luxury SUV — March of Authority</h3>
+  <center>
+    <img src="IDAI Crimson Strider.jpg"><br>
+  </center>
+  <p>
+    The IDAI Crimson Strider is the Black Delta Force’s luxury SUV, designed to stride across landscapes with elegance and command. Its sleek red frame, futuristic lines, and panoramic roof make it a symbol of prestige and resilience. Engineered for both urban patrols and frontier expeditions, the Crimson Strider glides with unwavering confidence, carrying the Marshal’s covenant into every mission.<br><br>
+    More than transport, the Crimson Strider embodies vigilance and discipline. Each journey across scenic lakes and rugged terrains is a declaration of guardianship. It is not merely a vehicle but a living march of authority — ensuring that justice, strength, and sovereignty travel wherever destiny calls. The Crimson Strider stands as a beacon of order, uniting technology and responsibility in motion.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Sentinel Carrier</h2>
+  <h3>Rapid Supply Unit — Lifeline of Missions</h3>
+  <center>
+    <img src="IDAI Rapid Supply.jpg"><br>
+  </center>
+  <p>
+    The IDAI Sentinel Carrier is the Black Delta Force’s rapid supply vehicle, engineered to deliver logistics and arsenals with unmatched speed. Bearing the insignia of guardianship, it moves like a lifeline across battlefronts, ensuring that every mission remains fueled, armed, and unstoppable. Its reinforced frame and advanced distribution systems make it the backbone of operational continuity.<br><br>
+    More than a truck, the Sentinel Carrier embodies vigilance and responsibility. Each deployment is a promise of support, each arrival a declaration of resilience. Whether rushing supplies to disaster zones or delivering arsenals to the front lines, the Sentinel Carrier stands as the Marshal’s covenant in motion — proving that strength is sustained not only by warriors but by the guardianship of supply.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Sky Titan — Supreme</h2>
+  <h3>To Conquer the Earth</h3>
+  <center>
+    <img src="IDAI Sky Titan - Supreme.jpg"><br>
+  </center>
+  <p>
+    The Sky Titan Supreme is the ultimate flagship of IDAI, a supercar engineered to dominate every frontier. More than a vehicle, it is a global icon of trust, technology, and power. With rotor‑powered flight, amphibious agility, and armored resilience, the Sky Titan Supreme conquers land, sea, and sky alike. Every detail reflects IDAI’s mastery of innovation, proving why it stands as the greatest company on Earth.<br><br>
+    From its luminous emblem to its aerodynamic silhouette, the Sky Titan Supreme is a declaration of authority. It transforms from a ground‑dominating supercar into a soaring fortress, rising above cities and mountains with effortless precision. This is not just transport — it is freedom engineered, a living legend that inspires trust through innovation and redefines the future of mobility.
+  </p>
+<center class = "sp">
+  <a href="https://rayaantasnim.github.io/Supreme-Sky-Titan/">Explore More </a>
+</center>
+</div>
+
+<div class="section">
+  <h2>IDAI Swarm Keeper</h2>
+  <h3>Drone Deployment Truck — Eyes of the Force</h3>
+  <center>
+    <img src="IDAI Swarm Keeper.jpg"><br>
+  </center>
+  <p>
+    The IDAI Swarm Keeper is a specialized truck designed to unleash fleets of surveillance drones during missions. Acting as a mobile command hive, it rapidly deploys aerial units for tracking, reconnaissance, and real‑time intelligence gathering. Its armored frame and advanced launch systems ensure that the Black Delta Force maintains constant vigilance across every frontier.<br><br>
+    More than a supply vehicle, the Swarm Keeper embodies the covenant of guardianship. Each drone it releases becomes an eye of justice, scanning cities, forests, and battlefields with precision. It is not merely transport but a sentinel of surveillance — ensuring that no threat escapes detection, and every mission is guided by clarity, discipline, and technological supremacy.
+  </p>
+</div>
+
+<div class="section">
+  <h2>IDAI Shadow Wing</h2>
+  <h3>Next‑Generation Stealth Jet</h3>
+  <center>
+    <img src="Jet - IDAI Shadow Wing.jpg"><br>
+  </center>
+  <p>
+    The IDAI Shadow Wing is the Black Delta Force’s next‑generation stealth jet, designed to dominate the skies with precision and silence. Its sleek aerodynamic frame, glowing conduits, and advanced twin‑engine thrust make it a predator of the heavens. Built for high‑altitude combat and rapid deployment, the Shadow Wing ensures aerial supremacy in every mission.<br><br>
+    More than a fighter jet, the Shadow Wing embodies vigilance and sovereignty. Known as the “Phantom of the Skies,” it represents discipline, courage, and unseen guardianship. Each flight is a covenant of protection, each maneuver a declaration of justice. The Shadow Wing is not merely transport — it is the living embodiment of aerial guardianship, carrying the Marshal’s command into the boundless horizon.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Police Car</h2>
+  <h3>Silent Authority in Disguise</h3>
+  <center>
+    <img src="Police Car.jpg"><br>
+  </center>
+  <p>
+    The Police Car is the Black Delta Force’s covert transport, operating under the guise of traditional regional law enforcement. Painted and equipped to resemble standard patrol units, it moves unnoticed through city streets, blending seamlessly with civilian authority. Yet beneath its familiar exterior lies advanced surveillance systems, reinforced armor, and rapid deployment capability.<br><br>
+    More than camouflage, the Police Car embodies the Force’s discipline and subtle guardianship. Each patrol is a silent mission, each stop a calculated maneuver. It is not merely transport but a hidden sentinel — ensuring that the Marshal’s command flows through society without detection, maintaining vigilance while cloaked in the ordinary. The Police Car proves that true authority often moves unseen, guarding justice from the shadows.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Steel Vanguard</h2>
+  <h3>Half‑Track Recon Carrier — All‑Terrain Super Truck</h3>
+  <center>
+    <img src="Steel Vanguard Half-Track Recon Carrier.jpg"><br>
+  </center>
+  <p>
+    The Steel Vanguard is a custom‑built super truck, engineered to dominate every terrain with unmatched versatility. Its half‑track design fuses wheeled agility with tracked stability, allowing it to traverse mud, snow, and rocky landscapes while maintaining speed and maneuverability. Reinforced armor and advanced recon sensors make it a mobile fortress, capable of transporting Rangers and critical equipment into hostile zones.<br><br>
+    More than a vehicle, the Steel Vanguard embodies resilience and adaptability. Each mission it undertakes is a testament to endurance, carrying the Marshal’s covenant across deserts, mountains, and urban battlegrounds. It is not merely transport but a living symbol of guardianship — a declaration that no frontier is too harsh, no mission too demanding, for the Black Delta Force.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Titan Rampart</h2>
+  <h3>Armored Tactical Fortress</h3>
+  <center>
+    <img src="Titan Rampart.jpg"><br>
+  </center>
+  <p>
+    The Titan Rampart is the Black Delta Force’s colossal armored tactical vehicle, forged to stand as a moving fortress. With its six‑wheel design, reinforced plating, and towering silhouette, it embodies resilience and dominance. Built for frontline defense and heavy deployment, the Rampart shields warriors and arsenals alike, ensuring that no mission falters under pressure.<br><br>
+    More than a transport, the Titan Rampart is a declaration of guardianship. Each advance across city streets or battlefront terrain is a testament to vigilance. It is not merely a carrier but a living wall of justice — a rampart of steel and discipline, carrying the Marshal’s covenant forward into destiny. The Titan Rampart stands as the immovable shield of the Force, proving that strength is not only in attack but in steadfast defense.
+  </p>
+</div>
+
+
+
+<br><br><footer>
+  <p>© IGC: IDAI Global Community. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

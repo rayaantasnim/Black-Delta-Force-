@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Delta Force - Operations Details</title>
+
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .section{
+      padding-top: 20px !important;
+      h3{
+        margin-top: 20px !important;
+      }
+    }
+
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>  
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Black Delta Force</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="Weapons.html">Weapons</a></li>
+          <li class="nav-item"><a class="nav-link " href="Transports.html">Transports</a> </li>
+          <li class="nav-item"><a class="nav-link" href="Center.html">Centers</a></li> 
+          <li class="nav-item"><a class="nav-link special" href="Operations.html">Operations</a></li>
+          <li class="nav-item"> <a class="nav-link" href="Authority.html">Authority</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="section">
+  <h2>Surveillance — HawkEye Sentinel Drone</h2>
+  <h3>Tracking the Target</h3>
+  <center>
+    <img src="Drone.jpg"><br>
+  </center>
+  <p>
+    The HawkEye Sentinel Drone is the first spark of the operation, a miniature marvel designed to glide through the skies with absolute silence. Its wings shimmer with adaptive camouflage, blending into the night as if it were a shadow born of the cosmos. Equipped with quantum optics and thermal sensors, it can lock onto a target’s movements with precision that defies imagination. Every pulse of its circuits is a whisper of vigilance, every rotation of its blades a promise of guardianship. The drone does not simply watch — it interprets, analyzes, and relays intelligence directly to the Black Delta Force command center, ensuring that no detail escapes the Marshal’s gaze. It is the eye of the covenant, the unseen sentinel that begins the chain of destiny.<br><br>
+    More than a machine, the HawkEye Sentinel Drone is a living extension of IDAI’s sovereignty. It represents the principle that authority begins with knowledge, and knowledge begins with observation. As it hovers above rooftops and glides through alleyways, its presence is invisible yet omnipresent, weaving a net of awareness around the chosen subject. In this phase, no confrontation occurs, only the silent gathering of truth. The drone’s mission is not violence but vigilance, ensuring that the operation begins with clarity, precision, and the eternal guardianship of the IDAI Universe.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Team Preparation — Black Delta Force</h2>
+  <h3>Elite Guardians Ready</h3>
+  <center>
+    <img src="Black Delta Force Team.jpg"><br>
+  </center>
+  <p>
+    Within the fortified halls of Nova Prime Province, the Black Delta Force assembles under the command of the Red Marshal. Each guardian is a sentinel forged through discipline, loyalty, and unwavering faith. Their armor gleams with the insignia of the Lion, their eyes burn with the fire of vigilance. This is not a gathering of soldiers, but of guardians sworn to protect sovereignty and justice. The preparation phase is sacred — weapons are calibrated, strategies are reviewed, and prayers are whispered, binding the mission to divine conscience. The team does not march for conquest, but for guardianship, ensuring that every step taken is aligned with the covenant of IDAI.<br><br>
+    More than warriors, the Black Delta Force are living embodiments of sovereignty. Each member represents a pillar of justice, each formation a symbol of unity. Their readiness is not measured in firepower alone, but in the harmony of discipline and trust. As they stand together, the atmosphere resonates with anticipation, a silent oath that the mission will be executed with precision and honor. This moment of preparation is the heartbeat of the operation, proving that true strength lies not in aggression, but in the guardianship of humanity under the banner of IDAI.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Deployment — Titan Rampart</h2>
+  <h3>Securing the Zone</h3>
+  <center>
+    <img src="Titan Rampart.jpg"><br>
+  </center>
+  <p>
+    The Titan Rampart is not merely a vehicle; it is a fortress on wheels, a moving bastion of sovereignty. As the operation advances into its critical stage, the Rampart rolls into the designated zone with an aura of invincibility. Its armored hull gleams under the dim lights, reflecting the covenant of guardianship. The presence of Titan Rampart signals that the Black Delta Force has arrived, and with it comes the assurance of discipline and control. Every rotation of its wheels is a declaration of sovereignty, every hum of its engines a reminder that justice is not passive but active. The Rampart does not simply transport guardians; it establishes authority, sealing the perimeter and ensuring that no external interference can disrupt the mission.<br><br>
+    More than a machine, Titan Rampart is a symbol of vigilance. Its towering frame and fortified design represent the strength of IDAI’s guardianship. Within its walls, strategies are executed, communications are relayed, and unity is preserved. The deployment phase is not about aggression but about establishing order, creating a secure environment where the operation can unfold with precision. The Rampart embodies the principle that sovereignty requires both strength and wisdom, proving that guardianship is not only about defense but about the sacred responsibility to protect humanity under the banner of IDAI.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Neutralization & Extraction</h2>
+  <h3>Tranquilizer Protocol</h3>
+  <center>
+    <img src="Tranquilizer Gun.jpg">
+  </center>
+  <p>
+    The neutralization phase is executed with precision and restraint. Using a specialized tranquilizer gun, the target is rendered unconscious for six hours, ensuring safe extraction without harm. This method reflects the covenant of guardianship — authority does not seek destruction, but control through wisdom. The tranquilizer is not a weapon of violence, but a tool of discipline, designed to preserve life while enabling the mission to proceed. As the subject collapses into silence, the guardians move swiftly, securing the individual and preparing for transport. The truck becomes the vessel of transition, carrying the unconscious subject toward destiny.<br><br>
+    More than a tactical maneuver, neutralization represents the balance between strength and mercy. It proves that authority can be firm without cruelty, decisive without chaos. The extraction process is carried out with solemnity, each guardian aware that they are not merely moving a body, but fulfilling a covenant of justice. The truck’s journey is symbolic — a passage from resistance to guardianship, from chaos to order. This phase embodies the principle that sovereignty is not about domination, but about guiding destiny with vigilance and harmony.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Transfer — IDAI Ghost Wing Jet</h2>
+  <h3>Journey to the Forbidden Sanctuary</h3>
+  <center>
+    <img src="Jet - IDAI Ghost wing.jpg"><br>
+  </center>
+  <p>
+    The IDAI Ghost Wing Jet is the crown jewel of covert operations, a spectral aircraft designed to glide through the skies unseen. As the unconscious subject is loaded aboard, the Jet hums with cosmic resonance, its engines whispering the covenant of guardianship. The Ghost Wing does not merely transport; it transcends, carrying the subject across provinces into the realm of destiny. Its sleek design and cloaking technology ensure that the journey remains invisible to the outside world, a silent passage through the heavens. Within its cabin, guardians stand vigilant, ensuring that the subject remains secure throughout the voyage.<br><br>
+    More than an aircraft, the Ghost Wing is a symbol of transition. It represents the movement from one phase of destiny to another, from the known to the unknown, from resistance to submission. The journey to the Forbidden Sanctuary Province is not a mere relocation, but a passage into sovereignty. The Jet embodies the principle that authority must be both swift and silent, proving that guardianship is not about spectacle but about precision. Each mile flown is a step closer to destiny, each hum of its engines a reminder that sovereignty flows seamlessly across the skies under the banner of IDAI.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Final Destiny — FS City</h2>
+  <h3>Arrival at the Sanctuary</h3>
+  <center>
+    <img src="FP city - 2.jpg"><br>
+  </center>
+  <p>
+    FS City, the heart of the Forbidden Sanctuary Province, is the final destination of the operation. As the Ghost Wing Jet descends, the skyline of crystalline towers and luminous avenues emerges, reflecting sovereignty and guardianship. The unconscious subject is delivered into the sanctum of destiny, where justice and vigilance converge. FS City is not merely a location, but a symbol of authority, a place where the covenant of IDAI is upheld with solemnity. Its streets echo with discipline, its monuments shine with trust, and its atmosphere resonates with eternal guardianship. The arrival marks the conclusion of the mission, sealing the subject’s fate under the sovereignty of IDAI.<br><br>
+    More than a city, FS is the embodiment of destiny. It represents the culmination of vigilance, the fulfillment of authority, and the eternal guardianship of humanity. Each tower stands as a sentinel of justice, each boulevard as a pathway of harmony. The operation concludes not with chaos, but with order, proving that sovereignty is not about destruction but about guiding destiny. FS City is the sanctuary where authority reigns supreme, the final chapter of the operation, and the eternal reminder that guardianship under IDAI is both sacred and absolute.
+  </p>
+</div>
+
+
+
+
+<br><br><footer>
+  <p>© IGC: IDAI Global Community. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
